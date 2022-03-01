@@ -7,7 +7,7 @@ jobs:
     steps:
       - run: echo "jobB"
       
-workflow:
-  setup:
+workflows:
+  secondjob:
     jobs:
       - jobB
