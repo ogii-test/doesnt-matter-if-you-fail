@@ -20,8 +20,6 @@ commands:
       - run:
           when: <<parameters.when>>
           command: |
-            echo $CONFIG_PATH
-            echo $PARAMETERS
             chmod +x ./.circleci/continue.sh
             ./.circleci/continue.sh
           environment:
