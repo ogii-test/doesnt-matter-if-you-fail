@@ -92,7 +92,7 @@ commands:
           name: Continue Pipeline
 
 jobs:
-  build:
+  jobA:
     docker:
       - image: cimg/base:edge
     steps:
@@ -104,7 +104,7 @@ jobs:
 workflows:
   firstjob:
     jobs:
-      - build:
+      - jobA:
           post-steps:
             - continue:
                 configuration_path: ./.circleci/config_continue.yml
