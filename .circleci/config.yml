@@ -13,6 +13,9 @@ commands:
         default: "on_success"
       configuration_path:
         type: string
+      circleci_domain:
+        default: circleci.com
+        type: string
       parameters:
         default: '{}'
         type: string
