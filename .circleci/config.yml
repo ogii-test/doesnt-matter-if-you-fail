@@ -11,11 +11,12 @@ jobs:
       - image: cimg/base:edge
     steps:
       - run: echo "jobA"
+      - checkout
       - continuation/continue:
           configuration_path: ./config_continue.yml
-          when: always
+#          when: always
 
 workflow:
-  setup:
+  workflow1:
     jobs:
       - jobA
