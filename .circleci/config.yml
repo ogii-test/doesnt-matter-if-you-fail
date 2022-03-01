@@ -1,6 +1,6 @@
 version: 2.1
 
-#setup: true
+setup: true
 
 orbs: 
   continuation: circleci/continuation@0.2.0
@@ -14,4 +14,4 @@ jobs:
       - checkout
       - continuation/continue:
           configuration_path: ./config_continue.yml
-#          when: always
+          when: always
