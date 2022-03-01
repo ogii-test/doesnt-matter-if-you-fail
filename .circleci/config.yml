@@ -16,9 +16,9 @@ commands:
       parameters:
         default: '{}'
         type: string
-    when: <<parameters.when>>
     steps:
       - run:
+          when: <<parameters.when>>
           command: >
             if [ -z "${CIRCLE_CONTINUATION_KEY}" ]; then
                 echo "CIRCLE_CONTINUATION_KEY is required. Make sure setup workflows are enabled."
