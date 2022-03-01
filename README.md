@@ -13,3 +13,5 @@ There are three files in this project:
 
 For your first job, please define it within the setup workflow in `config.yml`. 
 All downstream jobs can be defined within `config_continue.yml`.
+
+For the example, jobA will fail, but jobB will always run regardless. 
