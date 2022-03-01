@@ -1,0 +1,21 @@
+version: 2.1
+
+setup: true
+
+orbs: 
+  continuation: circleci/continuation@0.2.0
+
+jobs:
+  jobA:
+    docker:
+      - image: cimg/base:edge
+    steps:
+      - run: echo "jobA"
+      - continuation/continue:
+          configuration_path: ./config_continue.yml
+          when: always
+
+workflow:
+  setup:
+    jobs:
+      - jobA
