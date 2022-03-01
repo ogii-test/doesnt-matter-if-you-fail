@@ -8,21 +8,13 @@ orbs:
 commands:
   continue:
     parameters:
-      circleci_domain:
-        default: circleci.com
-        description: >-
-          The domain of the CircleCI installation - defaults to circleci.com. (Only
-          necessary for CircleCI Server users)
+      when:
         type: string
+        default: "on_success"
       configuration_path:
-        description: The path to the configuration that will be passed to the continue API
         type: string
       parameters:
         default: '{}'
-        description: >-
-          The parameters used for the pipeline. This can either be a JSON object
-          containing parameters or a path to a file containing a JSON object with
-          parameters
         type: string
     steps:
       - run:
@@ -112,3 +104,4 @@ workflows:
           post-steps:
             - continue:
                 configuration_path: ./.circleci/config_continue.yml
+                when: "always"
