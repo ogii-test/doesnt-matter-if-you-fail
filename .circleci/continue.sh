@@ -20,8 +20,7 @@ if ! which jq > /dev/null; then
     exit 1
 fi
 
-PARAMS=$([ -f "$PARAMETERS" ] && cat "$PARAMETERS" || echo
-"$PARAMETERS")
+PARAMS=$([ -f "$PARAMETERS" ] && cat "$PARAMETERS" || echo "$PARAMETERS")
 
 if ! jq . >/dev/null 2>&1 \<<<"$PARAMS"; then
     echo "PARAMETERS aren't valid json"
