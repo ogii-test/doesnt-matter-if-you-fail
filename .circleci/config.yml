@@ -20,6 +20,6 @@ workflows:
       - build:
           post-steps:
             - continuation/continue:
-                configuration_path: ./config_continue.yml
+                configuration_path: config_continue.yml
 #                when: always
  
