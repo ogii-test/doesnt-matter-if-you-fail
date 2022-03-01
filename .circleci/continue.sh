@@ -22,7 +22,7 @@ fi
 
 PARAMS=$([ -f "$PARAMETERS" ] && cat "$PARAMETERS" || echo "$PARAMETERS")
 
-if ! jq . >/dev/null 2>&1 \<<<"$PARAMS"; then
+if ! jq . >/dev/null 2>&1 <<<"$PARAMS"; then
     echo "PARAMETERS aren't valid json"
     exit 1
 fi
