@@ -22,4 +22,4 @@ workflows:
           post-steps:
             - continuation/continue:
                 configuration_path: ./.circleci/config_continue.yml
-#                when: always
+                when: always
