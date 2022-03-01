@@ -6,7 +6,7 @@ orbs:
   continuation: circleci/continuation@0.2.0
 
 jobs:
-  jobA:
+  build:
     docker:
       - image: cimg/base:edge
     steps:
@@ -15,8 +15,3 @@ jobs:
       - continuation/continue:
           configuration_path: ./config_continue.yml
 #          when: always
-
-workflow:
-  workflow1:
-    jobs:
-      - jobA
