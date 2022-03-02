@@ -44,4 +44,4 @@ workflows:
           post-steps:
             - continue:
                 configuration_path: ./.circleci/config_continue.yml
-                when: "alwaysdfsdf"
+                when: "on_success"
