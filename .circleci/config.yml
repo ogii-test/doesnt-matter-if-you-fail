@@ -9,7 +9,8 @@ commands:
   continue:
     parameters:
       when:
-        type: string
+        type: enum
+        enum: ["on_success", "on_fail", "always"]
         default: "on_success"
       configuration_path:
         type: string
